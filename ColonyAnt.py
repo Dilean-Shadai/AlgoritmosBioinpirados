@@ -1,17 +1,4 @@
-#Materia: Algoritmos Bioinspirados     Nombre alumno: Dilean Shadai García Alvarez
-#---------------------------------------------------------------------------------#
-'''
-Para saber y entender el funcionamiento de este algoritmo lo quiero transcribir y comentar
-en un notebook de Google Colab
-
-Enlace de mi notebook de Google colab: 
-(Aun no termino el genético, por eso este no he empezado a profundizar en su funcionamiento uwu)
-Referencia tomada del algoritmo: 
-https://www.youtube.com/watch?v=EJKdmEbGre8
-Documental para entrar en contexto y enterder el comportamiento, caracteristicas de las hormigas: 
-https://www.youtube.com/watch?v=SvwuDmvvLTk
-
------------------------------------ALGORITMO Colonia de Hormigas-----------------------------------'''
+#-----------------------------------ALGORITMO Colonia de Hormigas-----------------------------------
 
 import numpy as np
 from numpy import inf
