@@ -1,6 +1,6 @@
-#Materia: Algoritmos Bioinspirados     Nombre alumno: Dilean Shadai García Alvarez
-#---------------------------------------------------------------------------------#
-'''Para saber y entender el funcionamiento de este algoritmo lo estoy transcribiendo y comentando
+'''Materia: Algoritmos Bioinspirados     Nombre alumno: Dilean Shadai García Alvarez
+----------------------------------------------------------------------------------------------
+Para saber y entender el funcionamiento de este algoritmo lo estoy transcribiendo y comentando
 en un notebook de Google Colab
 
 Enlace de mi notebook de Google colab: 
