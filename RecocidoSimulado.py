@@ -1,5 +1,11 @@
 '''Algoritmos Bioinspirados | Sep 2023 | Dilean Shadai García
-Algoritmo de Recocido Simulado para minimizar una función: min F(x) = x2'''
+Algoritmo de Recocido Simulado para minimizar una función: min F(x) = x2
+
+Notas: 
+El éxito del Recocido Simulado se basa en la escogencia de una buena temperatura inicial (TO)
+y una adecuada velocidad de enfriamiento (r).
+
+'''
 
 #Librerias necesarias 
 import numpy as np
@@ -7,14 +13,14 @@ import numpy.random as rn
 import matplotlib.pyplot as plt  
 import matplotlib as mpl
 
-def annealing(random_start,
+def annealing(random_start, #Función para llevar acabo el recocido
               cost_function,
               random_neighbour,
               acceptance,
               temperature,
-              maxsteps=1000,
+              maxsteps=1000, #Realizara mil iteraciones 
               debug=True):
-    """ Optimize the black-box function 'cost_function' with the simulated annealing algorithm."""
+    """ Optimiza la función de caja negra con el algoritmo de recocido simulado"""
     state = random_start()
     cost = cost_function(state)
     states, costs = [state], [cost]
@@ -23,14 +29,12 @@ def annealing(random_start,
         T = temperature(fraction)
         new_state = random_neighbour(state, fraction)
         new_cost = cost_function(new_state)
-        if debug: print("Step #{:>2}/{:>2} : T = {:>4.3g}, state = {:>4.3g}, cost = {:>4.3g}, new_state = {:>4.3g}, new_cost = {:>4.3g} ...".format(step, maxsteps, T, state, cost, new_state, new_cost))
+       
         if acceptance_probability(cost, new_cost, T) > rn.random():
             state, cost = new_state, new_cost
             states.append(state)
             costs.append(cost)
-            # print("  ==> Accept it!")
-        # else:
-        #    print("  ==> Reject it...")
+           
     return state, cost_function(state), states, costs
 
 #Funcion objetivo
@@ -48,9 +52,9 @@ def cost_function(x):
     """ Cost of x = f(x)."""
     return f(x)
 
-#vacindario
+#vacindario usa un vecino aleatorio
 def random_start():
-    """ Random point in the interval."""
+    #Punto aleatorio intermedio en el intervalo
     a, b = interval
     return a + (b - a) * rn.random_sample()
 def random_neighbour(x, fraction=1):
