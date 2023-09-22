@@ -1,13 +1,5 @@
 '''Materia: Algoritmos Bioinspirados     Nombre alumno: Dilean Shadai García Alvarez
-----------------------------------------------------------------------------------------------
-Para saber y entender el funcionamiento de este algoritmo lo estoy transcribiendo y comentando
-en un notebook de Google Colab
-
-Enlace de mi notebook de Google colab: 
 https://colab.research.google.com/drive/1xliqvtq5VDQm0BMqXmqGcfmaHSU98AiJ?usp=sharing
-Referencia tomada del algoritmo: 
-https://tecnologiainformaticadeep.blogspot.com/2020/05/algortitmo-genetico-en-python-simple.html
-
 -----------------------------------ALGORITMO GENETICO SIMPLE-----------------------------------'''
 import random
 
